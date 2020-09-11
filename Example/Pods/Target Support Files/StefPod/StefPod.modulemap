@@ -1,0 +1,6 @@
+framework module StefPod {
+  umbrella header "StefPod-umbrella.h"
+
+  export *
+  module * { export * }
+}

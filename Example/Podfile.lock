@@ -1,0 +1,16 @@
+PODS:
+  - StefPod (0.1.0)
+
+DEPENDENCIES:
+  - StefPod (from `../`)
+
+EXTERNAL SOURCES:
+  StefPod:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  StefPod: 708b5e0a79b86094661d7cf9509f8d1ea1c9514e
+
+PODFILE CHECKSUM: 61d0c08b769fefc42f703b4608f8b8c5f7f3f194
+
+COCOAPODS: 1.9.3
