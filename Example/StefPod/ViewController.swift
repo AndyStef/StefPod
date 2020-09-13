@@ -7,18 +7,27 @@
 //
 
 import UIKit
+import StefPod
 
 class ViewController: UIViewController {
 
+    let motion = MotionService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        motion.delegate = self
+        motion.startGyroscopeTracking()
+        motion.startAccelerometerTracking()
     }
-
 }
 
+extension ViewController: MotionServiceDelegate {
+    func didReceive(_ gyroscopeMeasure: GyroscopeMeasure) {
+        print("Gyro \(gyroscopeMeasure.y)")
+    }
+    
+    func didReceive(_ acceleratorMeasure: AccelerometerMeasure) {
+        print("Acc \(acceleratorMeasure.x)")
+    }
+}
